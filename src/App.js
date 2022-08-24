@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import { Box } from '@mui/material';
+import Navbar from "./Js/Navbar";
+import About from "./Js/About";
+import Projects from "./Js/Projects";
+import Skills from "./Js/Skills";
+import Assets from "./Js/Assets";
+import HireMe from "./Js/HireMe";
+
+const styles = {
+  body : {
+    // padding : "0.3%",
+    background: "#18181b",
+  },
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box style={styles.body} >
+      <Navbar/>
+      <About/>
+      <Projects/>
+      <Skills />
+      <Assets/>
+      <HireMe/>
+    </Box>
   );
 }
 
